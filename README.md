@@ -125,3 +125,63 @@ data about the progress of the BFS.
 - traveled_path is storing nodes that
     traveled, have led to the destination.
     
+### Statistical comparison
+
+Considering the following map as a sample for making a comparison:
+![GitHub Logo](https://github.com/KelDakroury/AI_MazeSolver/blob/main/Pictures/sample.png)
+
+- Home coords: ( 3 , 4 )
+- Covid1 coords: ( 5 , 6 )
+- Covid2 coords: ( 2 , 7 )
+- Mask coords: ( 2 , 0 )
+- Doctor coords: ( 0 , 6 )
+
+Below are the runtimes of each algorithm over 1 0 independent runs on the map described above (in
+ms):
+N|Backtracking | BFS
+-|------------ | -------------
+1|13|9
+2|12|8
+3|12|8
+4|13|9
+5|12|8
+6|12|8
+7|14|9
+8|12|8
+9|12|12
+10|13|8
+
+The distribution of runtime values is close to normal. The occasional increases in runtime are likely due
+to the operating system performing other processes.
+
+## Unsolvable maps:
+
+it is impossible to solve those maps as the covid’s surrounding zone is blocking any possible move for the
+actor, and it cannot reach neither mask nor doctor without touching covid.
+
+
+![GitHub Logo](https://github.com/KelDakroury/AI_MazeSolver/blob/main/Pictures/Map%208.png)
+
+![GitHub Logo](https://github.com/KelDakroury/AI_MazeSolver/blob/main/Pictures/Map%207.png)
+
+![GitHub Logo](https://github.com/KelDakroury/AI_MazeSolver/blob/main/Pictures/Map%206.png)
+
+![GitHub Logo](https://github.com/KelDakroury/AI_MazeSolver/blob/main/Pictures/Map%205.png)
+
+## Execution guidelines:
+
+This code can be executed by typing:
+
+`<dfs.>` in the query part in prolog online compiler to run the Backtracking.
+`<bfs_.>` in the query part in prolog online compiler to run BFS.
+
+## References
+
+[1] 	"Geeks for Geeks," [Online]. Available: https://www.geeksforgeeks.org/backtracking-introduction/#:~:text=Backtracking%20can%20be%20defined%20as,search%20for%20a%20feasible%20solution..
+
+[2] 	"Wikipedia," [Online]. Available: https://en.wikipedia.org/wiki/Breadth-first_search.
+
+
+
+
+
